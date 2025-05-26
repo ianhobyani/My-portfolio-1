@@ -1,0 +1,437 @@
+/* CSS Reset (Keep this) */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Basic Styling */
+.container {
+  width: 80%; /* Corrected width */
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px;
+}
+
+header {
+  background-color: #fff;
+  color: #333;
+  padding: 20px 0; /* Reduced header padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative; /* Important for positioning context */
+  height: auto; /* Adjust height as needed */
+}
+
+.log-container {
+  position: relative; /* Changed from header-container to log-container to match HTML */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styles */
+.branding .logo img {
+  max-width: 100%; /* Make logo responsive */
+  height: auto;
+}
+
+.branding .logo {
+  display: block; /* Ensures the logo is a block-level element */
+}
+
+.log-container .logo img {
+  max-height: 200px; /* Adjust logo size */
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* Ensure logo is always on top */
+}
+
+nav {
+  flex-grow: 1; /* Allows nav to take up remaining space */
+  text-align: right; /* Align nav items to the right */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Align items to the end of the container */
+}
+
+nav li {
+  margin-left: 30px; /* Spacing between nav items */
+}
+
+nav a {
+  color: #333; /* Darker color for nav links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e8491d; /* Change color on hover */
+}
+
+/* Hero Text Styles */
+.hero-text {
+  position: relative; /* Changed to relative */
+  text-align: center;
+  padding: 20px;
+  margin-top: 70px; /* Adjust margin to position below logo */
+  z-index: 1; /* Ensure hero text is below the logo */
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Call to Action Buttons */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button.primary {
+  background-color: #e8491d; /* Primary color */
+  color: #fff;
+}
+
+.cta-button.primary:hover {
+  background-color: #c63d17; /* Darker shade on hover */
+}
+
+.cta-button {
+  background-color: #f0f0f0; /* Secondary color */
+  color: #333;
+}
+
+.cta-button:hover {
+  background-color: #ddd; /* Lighter shade on hover */
+}
+
+/* Sections */
+section {
+  padding: 20px 0;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.portfolio-item h3 {
+  margin-top: 0;
+}
+
+/* Footer */
+footer {
+  background: #a7aa08;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  position: fixed; /* Stick the footer to the bottom */
+  bottom: 0;
+  width: 100%;
+}
+
+/* Accessibility improvements */
+a:focus, button:focus {
+  outline: 2px solid #007bff; /* Add a visible focus indicator */
+  outline-offset: 2px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .log-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 20px;
+    text-align: center; /* Center nav items on smaller screens */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  .hero-text {
+    position: relative; /* Changed to relative */
+    transform: none;
+    padding: 20px;
+    margin-top: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .hero-text h1 {
+    font-size: 2em; /* Smaller font size on smaller screens */
+  }
+}
+
+/* To-Do List App Styles (Keep these) */
+.todo-app {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.todo-app h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.input-group input[type="text"] {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-group button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.input-group button:hover {
+  background-color: #0056b3;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#task-list li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#task-list li:last-child {
+  border-bottom: none;
+}
+
+#task-list li .delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#task-list li .delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Travel Blog Styles (Keep these) */
+.travel-blog input[type="text"] {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* E-commerce Product Page Styles (Keep these) */
+.ecommerce-product {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.ecommerce-product img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.color-options {
+  margin-top: 10px;
+}
+
+.color-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/* Define background colors for the color buttons */
+.color-button[data-color="blue"] {
+  background-color: blue;
+}
+
+.color-button[data-color="green"] {
+  background-color: green;
+}
+
+.color-button[data-color="red"] {
+  background-color: red;
+}
+
+#add-to-cart {
+  padding: 8px 12px;
+  background-color: #28a745; /* Example: Green */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Contact Section (Keep these) */
+#contact {
+  padding: 30px 0;
+  text-align: center;
+}
+
+/* Responsive Design (Keep these) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+  header #branding,
+  header nav {
+    float: none;
+    text-align: center;
+  }
+
+  header h1 {
+    margin-bottom: 10px;
+  }
+
+
+/* Larger Screen Adjustments */
+@media (min-width: 1200px) {
+  header {
+    padding: 30px 0; /* Adjust header padding for larger screens */
+  }
+}
+
+
+  .log-container .logo img {
+    max-height: 70px; /* Increase logo size on larger screens */
+  }
+
+  .hero-text {
+    margin-top: 100px; /* Adjust hero text margin for larger screens */
+  }
+
+  .hero-text h1 {
+    font-size: 3em; /* Larger font size on larger screens */
+  }
+
+  nav li {
+    margin-left: 40px; /* Increase nav item spacing */
+  }
+
+.social-links a {
+  color: inherit; /* Allow the link to inherit color */
+  text-decoration: none; /* Remove underline */
+
+}
+
+.whatsapp-icon {
+  color: #25D366; /* WhatsApp green */
+}
+
+.whatsapp-icon:hover {
+  color: #128C7E; /* Darker green on hover */
+}
+
+.facebook-icon {
+  color: #3b5998; /* Facebook blue */
+}
+
+.facebook-icon:hover {
+  color: #2d4373; /* Darker blue on hover */
+}
+
+.linkedin-icon {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.linkedin-icon:hover {
+  color: #005582; /* Darker blue on hover */
+}
