@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!-- Font Awesome -->
+  
+</style>
+</head>
+<body>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding: 20px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+    }
+    .social-links a {
+      color: inherit; /* Allow the link to inherit color */
+      text-decoration: none; /* Remove underline */
+    }
+    .facebook-icon {
+      color: #3b5998; /* Facebook blue */
+    }
+    .whatsapp-icon {
+      color: #25D366; /* WhatsApp green */
+    }
+    .linkedin-icon {
+      color: #0077b5; /* LinkedIn blue */
+    }
+  </style>
+
+    <header>
+        <div class="log-container">
+          <div class="branding">
+            <a href="index.html" class="logo">
+              <img src="images/log.png" alt="log" style="display: block; margin: 0 auto;"> <!-- Rec:\log.pngplace with your logo -->
+            </a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact" class="cta-button">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="hero-text">
+            <h1>Hello, I'm Ian Hobyani</h1>
+            <p>A passionate web developer crafting exceptional digital experiences.</p>
+            <a href="#portfolio" class="cta-button primary">View My Work</a>
+          </div>
+        </div>
+      </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a passionate developer with a love for creating innovative solutions.
+      I have experience in developing web applications using various technogies, including HTML, CSS, JavaScript, and React.</p>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="images/OIP.jpg" alt="Project 1">
+          <h3><strong>Project 1</strong></h3>
+          <p>This project is a basic yet functional to-do list web application built using HTML, CSS, and JavaScript. It allows users to add tasks, delete tasks, and provides a clean, user-friendly interface. The application demonstrates fundamental front-end development skills, including DOM manipulation, event handling, and basic styling. Key features include:
+            <li>Adding new tasks to the list.</li>
+             <li>Deleting tasks from the list.</li>
+            <li>A responsive design that adapts to different screen sizes.</p>
+
+          <!-- To-Do List App -->
+          <div class="todo-app">
+            <img src="images/R.png" alt="R">
+            <h2>To-Do List</h2>
+            <div class="input-group">
+              <input type="text" id="new-task" placeholder="Add new task...">
+              <button id="add-task">Add</button>
+            </div>
+            <ul id="task-list">
+              <!-- Tasks will be added here -->
+            </ul>
+          </div>
+        </div>
+        <!-- Project 2: Travel Blog -->
+        <div class="portfolio-item" id="project2">
+            <img src="images/tokwemukosi 1.jpg" alt="Tokwemukosi Dam">
+            <h3><strong>Project 2</strong></h3>My travel-blog: Tokwemukosi Dam is nestled in a picturesquare landscape surrounded by lush greenery and towering mountains, offering a serene escape from urban life.</h3>
+            <p>My first time at Tokwemukosi Dam was just like rejuvenating.</p>
+            <!-- Search Input and Button -->
+    <div class="search-container">
+    </div>
+</div>
+
+            </div>
+    <div class="blog-post">
+      <pictures>
+        <source srcset="images/mukosi.webp"
+        type="image/webp">
+        <img src="images/mukosi.webp" alt="Diverse flora and fauna">
+        <h3>The trails around the dam invite adventures to diverse flora and fauna. Hikers can enjoy breathing views of the water and the surrounding hills.</h3>
+        <p>The combination of outdoor activities, stunning views, and refreshing atmosphere created a memorable experience in me.</p>
+    </div>
+  
+            <div class="travel-blog">
+              <h2>Recent Posts</h2>
+              <input type="text" id="search-posts" placeholder="Search posts..." aria-label="Search blog posts">
+              <button id="search-button" onclick="submitSearch()">Search</button>
+              </div>
+              <div id="blog-posts-container">
+                <!-- Blog posts will be added here -->
+                 
+    </div>
+</div>
+
+<script>
+
+</script>
+                  
+    <script>
+    function submitSearch() {
+        const query = document.getElementById('search-posts').value.toLowerCase();
+        const posts = document.querySelectorAll('.post');
+        let results = [];
+
+        posts.forEach(post => {
+            const title = post.getAttribute('data-title').toLowerCase();
+            if (title.includes(query)) {
+                results.push(post);
+            } else {
+                post.style.display = 'none'; // Hide non-matching posts
+            }
+        });
+
+        // Show matching posts
+        results.forEach(post => post.style.display = 'block');
+
+        // Optional: Clear the input after submission
+        document.getElementById('search-posts').value = '';
+    }
+</script>
+
+<style>
+    .post {
+        margin: 10px 0;
+    }
+</style>
+</script>
+
+        
+  </section>
+  <section id="contact">
+    <div class Project 3: E-commerce Product Page -->
+        <div class="portfolio-item" id="project3">
+          <img src="images/bb bottle.jpg" alt="E-commerce Product Page" style="display: block; margin: 0 auto;">
+          <h3><strong>Project 3</strong></h3>
+          <h3>Project 3: Eco-Friendly Water Bottle</h3>
+          <p>A single-page e-commerce product page for an eco-friendly water bottle.</p>
+
+          <div class="ecommerce-product">
+            <h2>Eco-Friendly Water Bottle</h2>
+            <p>Stay hydrated in style with our eco-friendly water bottle!</p>
+            <img id="product-image" src="images/bottle 3.jpeg" alt="Eco-Friendly Water Bottle" style="display: block; margin: 0 auto;">
+
+
+            <div class="color-options">
+              <button class="color-button" data-color="blue" data-image="images/blue.jpg" aria-label="Blue Water Bottle">Blue</button>
+               <button class="color-button" data-color="green" data-image="images/green.jpg" aria-label="Green Water Bottle">Green</button>
+              <button class="color-button" data-color="red" data-image="images/red.jpg" aria-label="Red Water Bottle">Red</button>
+            </div>  
+
+            <img id="bottle-image" src="" alt="Selected Water Bottle" style="display: none;">
+
+
+            <button id="add-to-cart" aria-label="Add to cart">Add to Cart</button>
+          </div>
+        </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const colorButtons = document.querySelectorAll('.color-button');
+            const bottleImage = document.getElementById('bottle-image');
+
+            colorButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const imageSrc = button.dataset.image;
+                    bottleImage.src = imageSrc;
+                    bottleImage.style.display = 'block'; // Show the image
+                });
+            });
+        });
+    </script>
+
+  </head>
+</body>
+ 
+      </div>
+    </div class="container">
+      <h2>Contact Me</h2>
+      <p>If you'd like to get in touch, please don't hesitate to reach out.</p>
+      <p>Contact information: hobyaniian4@gmail.com | 0776945572/0718559013</p>
+      <footer>
+  
+    <p id="cart-count">0</p> items in cart
+  </div>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://www.facebook.com/ianhobyani" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+      <a href="https://wa.me/0776945572" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/Ian Hobyani" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  
+    <p>&copy; 2025 My Portfolio</p>
+  </footer> 
+
+  <style>
+    .whatsapp-icon {
+      color: #25D366; /* WhatsApp green color */
+    }
+
+    .whatsapp-icon:hover {
+      color: #128C7E; /* Darker green on hover */
+    }
+  </style>
+  </body>
+</html>
+  <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const colorButtons = document.querySelectorAll('.color-button');
+            const bottleImage = document.getElementById('bottle-image');
+            const addToCartButton = document.getElementById('add-to-cart');
+            const cartCount = document.getElementById('cart-count');
+            let cart = []; // Array to hold cart items
+
+            colorButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const imageSrc = button.dataset.image;
+                    bottleImage.src = imageSrc;
+                    bottleImage.style.display = 'block'; // Show the image
+                    colorButtons.forEach(btn => btn.classList.remove('selected'));
+                    button.classList.add('selected'); // Highlight selected button
+                });
+            });
+
+            addToCartButton.addEventListener('click', () => {
+                const selectedButton = document.querySelector('.color-button.selected');
+                if (selectedButton) {
+                    const selectedColor = selectedButton.dataset.color;
+                    const selectedImage = bottleImage.src; // Get the image source
+                    cart.push({ color: selectedColor, image: selectedImage }); // Store item in cart
+
+                    alert(`Added a ${selectedColor} water bottle to the cart!`);
+                    cartCount.textContent = cart.length; // Update cart count
+                } else {
+                    alert('Please select a color before adding to cart.');
+                }
+            });
+        });
+ </script>
+
+   <!-- Link JavaScript files -->
+   <script src="todo.js"></script>
+   <script src="travel.js"></script>
+   <script src="ecommerce.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const taskInput = document.getElementById('new-task');
+      const addButton = document.getElementById('add-task');
+      const taskList = document.getElementById('task-list');
+
+      addButton.addEventListener('click', function() {
+        const taskText = taskInput.value.trim(); // Remove leading/trailing spaces
+
+        if (taskText !== '') {
+          const listItem = document.createElement('li');
+          listItem.innerHTML = `
+            <span>${taskText}</span>
+            <button class="delete-button">Delete</button>
+          `;
+
+          taskList.appendChild(listItem);
+          taskInput.value = ''; // Clear the input field
+
+          // Add event listener for the delete button
+          const deleteButton = listItem.querySelector('.delete-button');
+          deleteButton.addEventListener('click', function() {
+            listItem.remove();
+          });
+        }
+      });
+
+      // Optional:  Pressing Enter to add a task
+      taskInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+          addButton.click(); // Trigger the add button click
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
